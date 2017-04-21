@@ -1,0 +1,1214 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/geekforbrains/zookeeper">evernote-zookeeper (v0.0.4)</a>
+</h1>
+<h4>A tool for taming the Evernote API</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.evernote-zookeeper">module evernote-zookeeper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.evernote-zookeeper">
+            function <span class="apidocSignatureSpan"></span>evernote-zookeeper
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.auth">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.</span>auth
+            <span class="apidocSignatureSpan">(client)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.note">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.</span>note
+            <span class="apidocSignatureSpan">(client, noteStore)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.notebook">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.</span>notebook
+            <span class="apidocSignatureSpan">(client, noteStore)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.tag">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.</span>tag
+            <span class="apidocSignatureSpan">(client, noteStore)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.user">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.</span>user
+            <span class="apidocSignatureSpan">(client, userStore)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">evernote-zookeeper.</span>auth.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">evernote-zookeeper.</span>note.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">evernote-zookeeper.</span>notebook.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">evernote-zookeeper.</span>tag.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">evernote-zookeeper.</span>user.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.evernote-zookeeper.auth">module evernote-zookeeper.auth</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.auth.auth">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.</span>auth
+            <span class="apidocSignatureSpan">(client)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.evernote-zookeeper.auth.prototype">module evernote-zookeeper.auth.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.auth.prototype.finish">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.auth.prototype.</span>finish
+            <span class="apidocSignatureSpan">(oauthToken, oauthTokenSecret, oauthVerifier, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.auth.prototype.start">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.auth.prototype.</span>start
+            <span class="apidocSignatureSpan">(callbackUrl, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.evernote-zookeeper.note">module evernote-zookeeper.note</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.note.note">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.</span>note
+            <span class="apidocSignatureSpan">(client, noteStore)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.evernote-zookeeper.note.prototype">module evernote-zookeeper.note.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.note.prototype.all">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.note.prototype.</span>all
+            <span class="apidocSignatureSpan">(resultSpecOptions, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.note.prototype.find">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.note.prototype.</span>find
+            <span class="apidocSignatureSpan">(filterOptions, resultSpecOptions, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.note.prototype.inNotebook">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.note.prototype.</span>inNotebook
+            <span class="apidocSignatureSpan">(notebookGuid, resultSpecOptions, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.note.prototype.share">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.note.prototype.</span>share
+            <span class="apidocSignatureSpan">(webUrl, noteGuid, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.note.prototype.taggedWith">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.note.prototype.</span>taggedWith
+            <span class="apidocSignatureSpan">(tagGuids, resultSpecOptions, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.note.prototype.withGuid">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.note.prototype.</span>withGuid
+            <span class="apidocSignatureSpan">(noteGuid, config, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.evernote-zookeeper.notebook">module evernote-zookeeper.notebook</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.notebook.notebook">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.</span>notebook
+            <span class="apidocSignatureSpan">(client, noteStore)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.evernote-zookeeper.notebook.prototype">module evernote-zookeeper.notebook.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.notebook.prototype.all">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.notebook.prototype.</span>all
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.notebook.prototype.default">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.notebook.prototype.</span>default
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.notebook.prototype.withGuid">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.notebook.prototype.</span>withGuid
+            <span class="apidocSignatureSpan">(notebookGuid, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.evernote-zookeeper.tag">module evernote-zookeeper.tag</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.tag.tag">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.</span>tag
+            <span class="apidocSignatureSpan">(client, noteStore)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.evernote-zookeeper.tag.prototype">module evernote-zookeeper.tag.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.tag.prototype.all">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.tag.prototype.</span>all
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.tag.prototype.named">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.tag.prototype.</span>named
+            <span class="apidocSignatureSpan">(tagNames, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.tag.prototype.withGuid">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.tag.prototype.</span>withGuid
+            <span class="apidocSignatureSpan">(guid, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.evernote-zookeeper.user">module evernote-zookeeper.user</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.user.user">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.</span>user
+            <span class="apidocSignatureSpan">(client, userStore)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.evernote-zookeeper.user.prototype">module evernote-zookeeper.user.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.user.prototype.info">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.user.prototype.</span>info
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.evernote-zookeeper.user.prototype.publicInfo">
+            function <span class="apidocSignatureSpan">evernote-zookeeper.user.prototype.</span>publicInfo
+            <span class="apidocSignatureSpan">(username, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.evernote-zookeeper" id="apidoc.module.evernote-zookeeper">module evernote-zookeeper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.evernote-zookeeper" id="apidoc.element.evernote-zookeeper.evernote-zookeeper">
+        function <span class="apidocSignatureSpan"></span>evernote-zookeeper
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Zookeeper(config) {
+  client = new en.Client({
+    consumerKey: config.consumerKey,
+    consumerSecret: config.consumerSecret,
+    token: config.token,
+    sandbox: config.sandbox
+  });
+
+  userStore = client.getUserStore();
+  noteStore = client.getNoteStore();
+
+  this.auth = new Auth(client);
+
+  this.user = new User(client, userStore);
+  this.users = this.user; // Syntactic sugar
+
+  this.notebook = new Notebook(client, noteStore);
+  this.notebooks = this.notebook; // Syntactic sugar
+
+  this.note = new Note(client, noteStore);
+  this.notes = this.note; // Syntactic sugar
+
+  this.tag = new Tag(client, noteStore);
+  this.tags = this.tag; // Syntactic sugar
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.auth" id="apidoc.element.evernote-zookeeper.auth">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.</span>auth
+        <span class="apidocSignatureSpan">(client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Auth(client) {
+  this.client = client;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.note" id="apidoc.element.evernote-zookeeper.note">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.</span>note
+        <span class="apidocSignatureSpan">(client, noteStore)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Note(client, noteStore) {
+  this.client = client;
+  this.noteStore = noteStore;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.notebook" id="apidoc.element.evernote-zookeeper.notebook">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.</span>notebook
+        <span class="apidocSignatureSpan">(client, noteStore)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Notebook(client, noteStore) {
+  this.client = client;
+  this.noteStore = noteStore;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.tag" id="apidoc.element.evernote-zookeeper.tag">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.</span>tag
+        <span class="apidocSignatureSpan">(client, noteStore)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Tag(client, noteStore) {
+  this.client = client;
+  this.noteStore = noteStore;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.user" id="apidoc.element.evernote-zookeeper.user">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.</span>user
+        <span class="apidocSignatureSpan">(client, userStore)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function User(client, userStore) {
+  this.client = client;
+  this.userStore = userStore;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.evernote-zookeeper.auth" id="apidoc.module.evernote-zookeeper.auth">module evernote-zookeeper.auth</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.auth.auth" id="apidoc.element.evernote-zookeeper.auth.auth">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.</span>auth
+        <span class="apidocSignatureSpan">(client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Auth(client) {
+  this.client = client;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.evernote-zookeeper.auth.prototype" id="apidoc.module.evernote-zookeeper.auth.prototype">module evernote-zookeeper.auth.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.auth.prototype.finish" id="apidoc.element.evernote-zookeeper.auth.prototype.finish">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.auth.prototype.</span>finish
+        <span class="apidocSignatureSpan">(oauthToken, oauthTokenSecret, oauthVerifier, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">finish = function (oauthToken, oauthTokenSecret, oauthVerifier, done) {
+  this.client.getAccessToken(
+    oauthToken,
+    oauthTokenSecret,
+    oauthVerifier,
+    function(err, token, tokenSecret, results) {
+      done(err, {
+        token: token,
+        tokenSecret: tokenSecret
+      });
+    }
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.auth.prototype.start" id="apidoc.element.evernote-zookeeper.auth.prototype.start">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.auth.prototype.</span>start
+        <span class="apidocSignatureSpan">(callbackUrl, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (callbackUrl, done) {
+  this.client.getRequestToken(callbackUrl, function(err, oauthToken, oauthTokenSecret, results) {
+    done(err, {
+      oauthToken: oauthToken,
+      oauthTokenSecret: oauthTokenSecret,
+      authorizeUrl: client.getAuthorizeUrl(oauthToken)
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.evernote-zookeeper.note" id="apidoc.module.evernote-zookeeper.note">module evernote-zookeeper.note</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.note.note" id="apidoc.element.evernote-zookeeper.note.note">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.</span>note
+        <span class="apidocSignatureSpan">(client, noteStore)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Note(client, noteStore) {
+  this.client = client;
+  this.noteStore = noteStore;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.evernote-zookeeper.note.prototype" id="apidoc.module.evernote-zookeeper.note.prototype">module evernote-zookeeper.note.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.note.prototype.all" id="apidoc.element.evernote-zookeeper.note.prototype.all">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.note.prototype.</span>all
+        <span class="apidocSignatureSpan">(resultSpecOptions, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">all = function (resultSpecOptions, done) {
+  if(!done) {
+    done = resultSpecOptions;
+    resultSpecOptions = null;
+  }
+
+  this.find(null, resultSpecOptions, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Notebooks
+
+```
+zk.notebook.withGuid(guid, options, function(err, notebook) {
+  // work with single notebook instance
+});
+
+zk.notebooks.<span class="apidocCodeKeywordSpan">all</span>(function(err, notebooks) {
+  // work with notebooks
+});
+```
+
+### Notes
+
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.note.prototype.find" id="apidoc.element.evernote-zookeeper.note.prototype.find">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.note.prototype.</span>find
+        <span class="apidocSignatureSpan">(filterOptions, resultSpecOptions, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">find = function (filterOptions, resultSpecOptions, done) {
+  if(!done) {
+    done = resultSpecOptions;
+    resultSpecOptions = null;
+  }
+
+  if(!resultSpecOptions) {
+    resultSpecOptions = {
+      includeTitle: true,
+      includeContentLength: false,
+      includeCreated: true,
+      includeUpdated: true,
+      includeDeleted: true,
+      includeUpdateSequenceNum: true,
+      includeNotebookGuid: true,
+      includeTagGuids: false,
+      includeAttributes: false,
+      includeLargestResourceMime: false,
+      includeLargestResourceSize: false
+    };
+  }
+
+  var filter = new en.NoteFilter(filterOptions);
+  var resultSpec = new en.NotesMetadataResultSpec(resultSpecOptions);
+
+  var notes = [];
+  var noteCount = -1; // -1 to ensure we ignore the first test below so note count is set from result
+  var offset = 0;
+  var limit = en.EDAM_USER_NOTES_MAX;
+
+  async.until(
+    function() {
+      return noteCount &gt;= 0 &amp;&amp; (offset + 1) * limit &gt; noteCount;
+    },
+    function(next) {
+      this.noteStore.findNotesMetadata(filter, offset, limit, resultSpec,
+        function(err, result) {
+          if(err) return next(err);
+
+          noteCount = result.totalNotes;
+          result.notes.forEach(function(n) {
+            notes.push(n);
+          });
+          offset++;
+          next();
+        }
+      );
+    },
+    function(err) {
+      done(null, notes);
+    }
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+Note.prototype.inNotebook = function(notebookGuid, resultSpecOptions, done) {
+ if(!done) {
+   done = resultSpecOptions;
+   resultSpecOptions = null;
+ }
+
+ this.<span class="apidocCodeKeywordSpan">find</span>({notebookGuid: notebookGuid}, resultSpecOptions, done);
+}
+
+
+/**
+* Return all Evernote note objects.
+*
+* See find() for details.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.note.prototype.inNotebook" id="apidoc.element.evernote-zookeeper.note.prototype.inNotebook">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.note.prototype.</span>inNotebook
+        <span class="apidocSignatureSpan">(notebookGuid, resultSpecOptions, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inNotebook = function (notebookGuid, resultSpecOptions, done) {
+  if(!done) {
+    done = resultSpecOptions;
+    resultSpecOptions = null;
+  }
+
+  this.find({notebookGuid: notebookGuid}, resultSpecOptions, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // work with single note object
+});
+
+zk.notes.all(function(err, notes) {
+  // work with all notes
+});
+
+zk.notes.<span class="apidocCodeKeywordSpan">inNotebook</span>(notebookGuid, function(err, notes) {
+  // work with notes in specific notebook
+});
+
+zk.notes.taggedWith(tags, function(err, notes) {
+  // work with tagged notes
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.note.prototype.share" id="apidoc.element.evernote-zookeeper.note.prototype.share">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.note.prototype.</span>share
+        <span class="apidocSignatureSpan">(webUrl, noteGuid, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">share = function (webUrl, noteGuid, done) {
+  this.noteStore.shareNote(noteGuid, function(err, shareKey) {
+    if(err) return done(err);
+    return done(null, {
+      shareKey: shareKey,
+      url: webUrl + 'sh/' + noteGuid + '/' + shareKey
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // work with notes in specific notebook
+});
+
+zk.notes.taggedWith(tags, function(err, notes) {
+  // work with tagged notes
+});
+
+zk.note.<span class="apidocCodeKeywordSpan">share</span>(webApiUrlPrefix, noteGuid, function(err, shareInfo) {
+  // work with shared note
+});
+```
+
+### Tags
+
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.note.prototype.taggedWith" id="apidoc.element.evernote-zookeeper.note.prototype.taggedWith">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.note.prototype.</span>taggedWith
+        <span class="apidocSignatureSpan">(tagGuids, resultSpecOptions, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">taggedWith = function (tagGuids, resultSpecOptions, done) {
+  if(!done) {
+    done = resultSpecOptions;
+    resultSpecOptions = null;
+  }
+
+  if(!(tagGuids instanceof Array)) {
+    tagGuids = [tagGuids];
+  }
+
+  this.find({tagGuids: tagGuids}, resultSpecOptions, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // work with all notes
+});
+
+zk.notes.inNotebook(notebookGuid, function(err, notes) {
+  // work with notes in specific notebook
+});
+
+zk.notes.<span class="apidocCodeKeywordSpan">taggedWith</span>(tags, function(err, notes) {
+  // work with tagged notes
+});
+
+zk.note.share(webApiUrlPrefix, noteGuid, function(err, shareInfo) {
+  // work with shared note
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.note.prototype.withGuid" id="apidoc.element.evernote-zookeeper.note.prototype.withGuid">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.note.prototype.</span>withGuid
+        <span class="apidocSignatureSpan">(noteGuid, config, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withGuid = function (noteGuid, config, done) {
+  if(!done) {
+    done = config;
+    config = {
+      withContent: true,
+      withResourcesData: true,
+      withResourcesRecognition: false,
+      withResourcesAlternateData: false
+    };
+  }
+
+  this.noteStore.getNote(
+    noteGuid,
+    config.withContent,
+    config.withResourcesData,
+    config.withResourcesRecognition,
+    config.withResourcesAlternateData,
+    done
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // work with public user info
+});
+```
+
+### Notebooks
+
+```
+zk.notebook.<span class="apidocCodeKeywordSpan">withGuid</span>(guid, options, function(err, notebook) {
+  // work with single notebook instance
+});
+
+zk.notebooks.all(function(err, notebooks) {
+  // work with notebooks
+});
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.evernote-zookeeper.notebook" id="apidoc.module.evernote-zookeeper.notebook">module evernote-zookeeper.notebook</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.notebook.notebook" id="apidoc.element.evernote-zookeeper.notebook.notebook">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.</span>notebook
+        <span class="apidocSignatureSpan">(client, noteStore)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Notebook(client, noteStore) {
+  this.client = client;
+  this.noteStore = noteStore;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.evernote-zookeeper.notebook.prototype" id="apidoc.module.evernote-zookeeper.notebook.prototype">module evernote-zookeeper.notebook.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.notebook.prototype.all" id="apidoc.element.evernote-zookeeper.notebook.prototype.all">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.notebook.prototype.</span>all
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">all = function (done) {
+  this.noteStore.listNotebooks(done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Notebooks
+
+```
+zk.notebook.withGuid(guid, options, function(err, notebook) {
+  // work with single notebook instance
+});
+
+zk.notebooks.<span class="apidocCodeKeywordSpan">all</span>(function(err, notebooks) {
+  // work with notebooks
+});
+```
+
+### Notes
+
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.notebook.prototype.default" id="apidoc.element.evernote-zookeeper.notebook.prototype.default">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.notebook.prototype.</span>default
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default = function (done) {
+  this.noteStore.getDefaultNotebook(done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.notebook.prototype.withGuid" id="apidoc.element.evernote-zookeeper.notebook.prototype.withGuid">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.notebook.prototype.</span>withGuid
+        <span class="apidocSignatureSpan">(notebookGuid, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withGuid = function (notebookGuid, done) {
+  this.noteStore.getNotebook(notebookGuid, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // work with public user info
+});
+```
+
+### Notebooks
+
+```
+zk.notebook.<span class="apidocCodeKeywordSpan">withGuid</span>(guid, options, function(err, notebook) {
+  // work with single notebook instance
+});
+
+zk.notebooks.all(function(err, notebooks) {
+  // work with notebooks
+});
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.evernote-zookeeper.tag" id="apidoc.module.evernote-zookeeper.tag">module evernote-zookeeper.tag</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.tag.tag" id="apidoc.element.evernote-zookeeper.tag.tag">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.</span>tag
+        <span class="apidocSignatureSpan">(client, noteStore)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Tag(client, noteStore) {
+  this.client = client;
+  this.noteStore = noteStore;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.evernote-zookeeper.tag.prototype" id="apidoc.module.evernote-zookeeper.tag.prototype">module evernote-zookeeper.tag.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.tag.prototype.all" id="apidoc.element.evernote-zookeeper.tag.prototype.all">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.tag.prototype.</span>all
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">all = function (done) {
+  this.noteStore.listTags(done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Notebooks
+
+```
+zk.notebook.withGuid(guid, options, function(err, notebook) {
+  // work with single notebook instance
+});
+
+zk.notebooks.<span class="apidocCodeKeywordSpan">all</span>(function(err, notebooks) {
+  // work with notebooks
+});
+```
+
+### Notes
+
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.tag.prototype.named" id="apidoc.element.evernote-zookeeper.tag.prototype.named">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.tag.prototype.</span>named
+        <span class="apidocSignatureSpan">(tagNames, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">named = function (tagNames, done) {
+  var sortedTags = [];
+
+  this.all(function(err, tags) {
+    for(var k in tags) {
+      if(tagNames.indexOf(tags[k].name) &gt; -1) {
+        sortedTags.push(tags[k]);
+      }
+    }
+
+    done(err, sortedTags);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // all tags
+});
+
+zk.tag.withGuid(tagGuid, function(err, tag) {
+  // a single tag object
+});
+
+zk.tags.<span class="apidocCodeKeywordSpan">named</span>(['tag-a', 'tag-b'], function(err, tags) {
+  // work with tag objects
+});
+```
+
+Tests
+-----
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.tag.prototype.withGuid" id="apidoc.element.evernote-zookeeper.tag.prototype.withGuid">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.tag.prototype.</span>withGuid
+        <span class="apidocSignatureSpan">(guid, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withGuid = function (guid, done) {
+  this.noteStore.getTag(guid, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // work with public user info
+});
+```
+
+### Notebooks
+
+```
+zk.notebook.<span class="apidocCodeKeywordSpan">withGuid</span>(guid, options, function(err, notebook) {
+  // work with single notebook instance
+});
+
+zk.notebooks.all(function(err, notebooks) {
+  // work with notebooks
+});
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.evernote-zookeeper.user" id="apidoc.module.evernote-zookeeper.user">module evernote-zookeeper.user</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.user.user" id="apidoc.element.evernote-zookeeper.user.user">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.</span>user
+        <span class="apidocSignatureSpan">(client, userStore)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function User(client, userStore) {
+  this.client = client;
+  this.userStore = userStore;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.evernote-zookeeper.user.prototype" id="apidoc.module.evernote-zookeeper.user.prototype">module evernote-zookeeper.user.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.user.prototype.info" id="apidoc.element.evernote-zookeeper.user.prototype.info">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.user.prototype.</span>info
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">info = function (done) {
+  var self = this;
+
+  this.userStore.getUser(function(err, info) {
+    if(err) return done(err);
+
+    self.publicInfo(info.username, function(err, publicInfo) {
+      if(err) return done(err);
+      info.public = publicInfo;
+      return done(null, info);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var Zookeeper = require('evernote-zookeeper');
+var zk = new Zookeeper(accessToken);
+```
+
+### User
+
+```
+zk.user.<span class="apidocCodeKeywordSpan">info</span>(function(err, info) {
+  // work with user info (includes public info - see user.publicInfo)
+});
+
+zk.user.publicInfo(function(err, publicInfo) {
+  // work with public user info
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.evernote-zookeeper.user.prototype.publicInfo" id="apidoc.element.evernote-zookeeper.user.prototype.publicInfo">
+        function <span class="apidocSignatureSpan">evernote-zookeeper.user.prototype.</span>publicInfo
+        <span class="apidocSignatureSpan">(username, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">publicInfo = function (username, done) {
+  this.userStore.getPublicUserInfo(username, done);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### User
+
+```
+zk.user.info(function(err, info) {
+  // work with user info (includes public info - see user.publicInfo)
+});
+
+zk.user.<span class="apidocCodeKeywordSpan">publicInfo</span>(function(err, publicInfo) {
+  // work with public user info
+});
+```
+
+### Notebooks
+
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
